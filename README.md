@@ -62,13 +62,6 @@ API disponível em: http://localhost:3000
 
 A API possui documentação interativa completa com **Scalar API Reference**, disponível apenas em modo desenvolvimento.
 
-### Acessando a documentação
-
-```bash
-# Inicie o servidor em modo dev
-docker-compose --profile dev up
-```
-
 Acesse: **http://localhost:3333/docs**
 
 ### Recursos da documentação
