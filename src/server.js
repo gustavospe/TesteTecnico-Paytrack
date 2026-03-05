@@ -51,6 +51,7 @@ async function startServer() {
         health: 'GET /api/health',
         sync: 'POST /api/sync',
         syncStatus: 'GET /api/sync/status',
+        syncClear: 'DELETE /api/sync/clear',
         users: 'GET /api/users',
         userStats: 'GET /api/users/stats/summary',
         userByEmail: 'GET /api/users/:email',

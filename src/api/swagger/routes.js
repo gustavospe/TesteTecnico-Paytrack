@@ -82,6 +82,41 @@
 
 /**
  * @swagger
+ * /api/sync/clear:
+ *   delete:
+ *     summary: Limpar Banco de Dados
+ *     description: Remove todos os usuários do banco de dados
+ *     tags: [Sync]
+ *     responses:
+ *       200:
+ *         description: Banco limpo com sucesso
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: true
+ *                 message:
+ *                   type: string
+ *                   example: Banco de dados limpo com sucesso
+ *                 data:
+ *                   type: object
+ *                   properties:
+ *                     deletedRecords:
+ *                       type: integer
+ *                       example: 150
+ *       500:
+ *         description: Erro ao limpar banco
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/ErrorResponse'
+ */
+
+/**
+ * @swagger
  * /api/users:
  *   get:
  *     summary: Listar Usuários

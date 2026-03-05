@@ -208,6 +208,32 @@ class SyncController {
       databaseService.close();
     }
   }
+
+  async clearDatabase(req, res) {
+    const databaseService = new DatabaseService();
+
+    try {
+      databaseService.initialize();
+      const deletedCount = databaseService.clearAll();
+
+      res.status(200).json({
+        success: true,
+        message: 'Banco de dados limpo com sucesso',
+        data: {
+          deletedRecords: deletedCount,
+        },
+      });
+    } catch (error) {
+      logger.error('Erro ao limpar banco', { error: error.message });
+      res.status(500).json({
+        success: false,
+        message: 'Erro ao limpar banco de dados',
+        error: error.message,
+      });
+    } finally {
+      databaseService.close();
+    }
+  }
 }
 
 module.exports = new SyncController();

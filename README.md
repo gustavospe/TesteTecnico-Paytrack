@@ -45,7 +45,8 @@ API disponível em: http://localhost:3000
 
 ### Sincronização
 - `POST /api/sync` - Executa sincronização
-- `GET /api/sync/status` - Status da última sync
+- `GET /api/sync/status` - Status do banco de dados
+- `DELETE /api/sync/clear` - Limpa todos os dados
 
 ### Usuários
 - `GET /api/users` - Lista usuários (paginado)

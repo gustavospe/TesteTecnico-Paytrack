@@ -170,6 +170,13 @@ class DatabaseService {
     return { action: 'updated', email: user.email };
   }
 
+  clearAll() {
+    const stmt = this.db.prepare('DELETE FROM users');
+    const result = stmt.run();
+    logger.info(`Banco de dados limpo: ${result.changes} registros removidos`);
+    return result.changes;
+  }
+
   close() {
     if (this.db) {
       this.db.close();

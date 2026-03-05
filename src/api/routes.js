@@ -6,6 +6,7 @@ const router = express.Router();
 
 router.post('/sync', (req, res) => syncController.executeSync(req, res));
 router.get('/sync/status', (req, res) => syncController.getStatus(req, res));
+router.delete('/sync/clear', (req, res) => syncController.clearDatabase(req, res));
 
 router.get('/users', (req, res) => userController.listUsers(req, res));
 router.get('/users/stats/summary', (req, res) => userController.getStats(req, res));

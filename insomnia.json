@@ -61,6 +61,23 @@
       "_type": "request"
     },
     {
+      "_id": "req_sync_clear",
+      "parentId": "fld_sync",
+      "modified": 1709566225000,
+      "created": 1709566225000,
+      "url": "{{ _.base_url }}/api/sync/clear",
+      "name": "Clear Database",
+      "description": "Remove todos os usuários do banco de dados",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1709566225000,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
       "_id": "req_users_list",
       "parentId": "fld_users",
       "modified": 1709566260000,
