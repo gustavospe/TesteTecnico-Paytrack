@@ -1,7 +1,6 @@
 {
   "name": "paytrack-user-sync",
   "version": "1.0.0",
-  "description": "Sistema de sincronização de usuários/RH via API externa",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
