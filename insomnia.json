@@ -1,0 +1,289 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-03-04T15:30:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2023.5.8",
+  "resources": [
+    {
+      "_id": "req_health_check",
+      "parentId": "fld_api",
+      "modified": 1709566200000,
+      "created": 1709566200000,
+      "url": "{{ _.base_url }}/api/health",
+      "name": "Health Check",
+      "description": "Verifica se a API está online",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1709566200000,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_sync_execute",
+      "parentId": "fld_sync",
+      "modified": 1709566210000,
+      "created": 1709566210000,
+      "url": "{{ _.base_url }}/api/sync",
+      "name": "Execute Sync",
+      "description": "Executa a sincronização de usuários da API externa",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1709566210000,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_sync_status",
+      "parentId": "fld_sync",
+      "modified": 1709566220000,
+      "created": 1709566220000,
+      "url": "{{ _.base_url }}/api/sync/status",
+      "name": "Get Sync Status",
+      "description": "Retorna o status da última sincronização executada",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1709566220000,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_reports_list",
+      "parentId": "fld_reports",
+      "modified": 1709566230000,
+      "created": 1709566230000,
+      "url": "{{ _.base_url }}/api/reports",
+      "name": "List Reports",
+      "description": "Lista todos os relatórios de sincronização gerados",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1709566230000,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_reports_get",
+      "parentId": "fld_reports",
+      "modified": 1709566240000,
+      "created": 1709566240000,
+      "url": "{{ _.base_url }}/api/reports/sync-report-2026-03-04T15-05-56",
+      "name": "Get Report by ID",
+      "description": "Retorna um relatório específico pelo ID",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1709566240000,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_reports_delete",
+      "parentId": "fld_reports",
+      "modified": 1709566250000,
+      "created": 1709566250000,
+      "url": "{{ _.base_url }}/api/reports/sync-report-2026-03-04T15-05-56",
+      "name": "Delete Report",
+      "description": "Deleta um relatório específico",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1709566250000,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_users_list",
+      "parentId": "fld_users",
+      "modified": 1709566260000,
+      "created": 1709566260000,
+      "url": "{{ _.base_url }}/api/users",
+      "name": "List Users",
+      "description": "Lista usuários do banco de dados",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "name": "limit",
+          "value": "10",
+          "description": "Quantidade de registros (padrão: 50)"
+        },
+        {
+          "name": "offset",
+          "value": "0",
+          "description": "Offset para paginação"
+        }
+      ],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1709566260000,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_users_filter",
+      "parentId": "fld_users",
+      "modified": 1709566270000,
+      "created": 1709566270000,
+      "url": "{{ _.base_url }}/api/users",
+      "name": "Filter Users",
+      "description": "Lista usuários com filtros",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "name": "country",
+          "value": "BR",
+          "description": "Filtrar por país"
+        },
+        {
+          "name": "minAge",
+          "value": "25",
+          "description": "Idade mínima"
+        },
+        {
+          "name": "maxAge",
+          "value": "40",
+          "description": "Idade máxima"
+        },
+        {
+          "name": "limit",
+          "value": "20",
+          "description": "Quantidade de registros"
+        }
+      ],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1709566270000,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_users_stats",
+      "parentId": "fld_users",
+      "modified": 1709566280000,
+      "created": 1709566280000,
+      "url": "{{ _.base_url }}/api/users/stats/summary",
+      "name": "Get Users Stats",
+      "description": "Retorna estatísticas dos usuários (total, por país, gênero, idade)",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1709566280000,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_users_by_email",
+      "parentId": "fld_users",
+      "modified": 1709566290000,
+      "created": 1709566290000,
+      "url": "{{ _.base_url }}/api/users/user@example.com",
+      "name": "Get User by Email",
+      "description": "Busca um usuário específico pelo email",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1709566290000,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "fld_api",
+      "parentId": "wrk_paytrack",
+      "modified": 1709566100000,
+      "created": 1709566100000,
+      "name": "API General",
+      "description": "Endpoints gerais da API",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1709566100000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_sync",
+      "parentId": "wrk_paytrack",
+      "modified": 1709566110000,
+      "created": 1709566110000,
+      "name": "Sync Operations",
+      "description": "Operações de sincronização",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1709566110000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_reports",
+      "parentId": "wrk_paytrack",
+      "modified": 1709566120000,
+      "created": 1709566120000,
+      "name": "Reports",
+      "description": "Gerenciamento de relatórios",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1709566120000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "fld_users",
+      "parentId": "wrk_paytrack",
+      "modified": 1709566130000,
+      "created": 1709566130000,
+      "name": "Users",
+      "description": "Consulta de usuários",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1709566130000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_paytrack",
+      "parentId": null,
+      "modified": 1709566000000,
+      "created": 1709566000000,
+      "name": "Paytrack User Sync API",
+      "description": "API REST para sincronização de usuários",
+      "_type": "workspace"
+    },
+    {
+      "_id": "env_base",
+      "parentId": "wrk_paytrack",
+      "modified": 1709566050000,
+      "created": 1709566050000,
+      "name": "Base Environment",
+      "data": {
+        "base_url": "http://localhost:3333"
+      },
+      "dataPropertyOrder": {
+        "&": ["base_url"]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1709566050000,
+      "_type": "environment"
+    }
+  ]
+}

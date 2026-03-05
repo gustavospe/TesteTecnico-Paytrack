@@ -1,0 +1,38 @@
+FROM node:18-slim
+
+LABEL maintainer="Paytrack User Sync - DEV"
+
+WORKDIR /app
+
+# Instala dependências para compilar módulos nativos (better-sqlite3)
+RUN apt-get update && apt-get install -y \
+    python3 \
+    make \
+    g++ \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copia arquivos de dependências
+COPY package*.json ./
+
+# Instala dependências do zero
+RUN npm install
+
+# Copia código fonte SEM node_modules (está no .dockerignore)
+COPY . .
+
+# Rebuild better-sqlite3 dentro do container com suas libs
+RUN npm rebuild better-sqlite3 --build-from-source
+
+# Cria diretórios necessários
+RUN mkdir -p database reports logs
+
+# Define variáveis de ambiente padrão
+ENV NODE_ENV=development
+ENV LOG_LEVEL=debug
+ENV PORT=3333
+
+# Expõe a porta
+EXPOSE 3333
+
+# Executa em modo desenvolvimento com nodemon
+CMD ["npm", "run", "dev"]
