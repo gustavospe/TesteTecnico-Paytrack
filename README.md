@@ -58,6 +58,29 @@ API disponível em: http://localhost:3000
 - `country` - Filtro por país
 - `minAge` / `maxAge` - Filtro por idade
 
+## Documentação Interativa
+
+A API possui documentação interativa completa com **Scalar API Reference**, disponível apenas em modo desenvolvimento.
+
+### Acessando a documentação
+
+```bash
+# Inicie o servidor em modo dev
+docker-compose --profile dev up
+```
+
+Acesse: **http://localhost:3333/docs**
+
+### Recursos da documentação
+
+- Listagem completa de todos os endpoints
+- Teste interativo das requisições
+- Exemplos de request/response
+- Schemas detalhados dos objetos
+- Interface moderna e responsiva
+
+A documentação é gerada automaticamente a partir das anotações Swagger no código e oferece uma experiência interativa para explorar e testar a API sem precisar de ferramentas externas.
+
 ## Variáveis de Ambiente
 
 ```env
