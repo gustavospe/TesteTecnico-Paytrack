@@ -20,6 +20,20 @@ API REST para sincronização e gerenciamento de usuários consumindo dados da [
 - Winston (logging)
 - Docker & Docker Compose
 
+## Pré-requisitos
+
+### Para executar com Docker (recomendado)
+- [Docker](https://docs.docker.com/get-docker/) 20.10+
+- [Docker Compose](https://docs.docker.com/compose/install/) 2.0+
+
+### Para executar localmente
+- [Node.js](https://nodejs.org/) 18+
+- npm ou pnpm
+- Build tools para compilar better-sqlite3:
+  - **Linux/WSL**: `python3`, `make`, `g++`
+  - **macOS**: Xcode Command Line Tools
+  - **Windows**: [windows-build-tools](https://www.npmjs.com/package/windows-build-tools)
+
 ## Quick Start
 
 ### Desenvolvimento
